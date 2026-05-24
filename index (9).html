@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculator & Counter | Preetam Chakraborty</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header class="top-bar">
+    <span class="top-logo">&#9881; Utility Dashboard</span>
+    <span class="top-name">Preetam Chakraborty</span>
+  </header>
+
+  <main class="dashboard">
+
+    <!-- ══ CALCULATOR ══ -->
+    <section class="card" id="calc-card">
+      <div class="card-header">
+        <span class="card-icon">&#8747;</span>
+        <h2>Calculator</h2>
+      </div>
+
+      <div class="calc-display">
+        <div id="calc-expr" class="calc-expr"></div>
+        <div id="calc-screen" class="calc-screen">0</div>
+      </div>
+
+      <div class="calc-grid">
+        <!-- Row 1 -->
+        <button class="btn btn-fn wide2" onclick="calcClear()">AC</button>
+        <button class="btn btn-fn" onclick="calcDel()">&#9003;</button>
+        <button class="btn btn-op" onclick="calcInput('/')">&#247;</button>
+        <!-- Row 2 -->
+        <button class="btn" onclick="calcInput('7')">7</button>
+        <button class="btn" onclick="calcInput('8')">8</button>
+        <button class="btn" onclick="calcInput('9')">9</button>
+        <button class="btn btn-op" onclick="calcInput('*')">&#215;</button>
+        <!-- Row 3 -->
+        <button class="btn" onclick="calcInput('4')">4</button>
+        <button class="btn" onclick="calcInput('5')">5</button>
+        <button class="btn" onclick="calcInput('6')">6</button>
+        <button class="btn btn-op" onclick="calcInput('-')">&#8722;</button>
+        <!-- Row 4 -->
+        <button class="btn" onclick="calcInput('1')">1</button>
+        <button class="btn" onclick="calcInput('2')">2</button>
+        <button class="btn" onclick="calcInput('3')">3</button>
+        <button class="btn btn-op" onclick="calcInput('+')">+</button>
+        <!-- Row 5 -->
+        <button class="btn btn-zero" onclick="calcInput('0')">0</button>
+        <button class="btn" onclick="calcInput('.')">.</button>
+        <button class="btn btn-eq" onclick="calcEquals()">=</button>
+      </div>
+    </section>
+
+    <!-- ══ COUNTER ══ -->
+    <section class="card" id="counter-card">
+      <div class="card-header">
+        <span class="card-icon">&#9654;</span>
+        <h2>Counter</h2>
+      </div>
+
+      <div class="counter-display">
+        <div id="counter-value" class="counter-value">0</div>
+        <div id="counter-label" class="counter-label">Ready</div>
+      </div>
+
+      <div class="counter-controls">
+        <button class="cbtn cbtn-dec" onclick="counterChange(-1)">&#8722;</button>
+        <button class="cbtn cbtn-reset" onclick="counterReset()">Reset</button>
+        <button class="cbtn cbtn-inc" onclick="counterChange(1)">+</button>
+      </div>
+
+      <div class="counter-step-row">
+        <label class="step-label">Step Size</label>
+        <div class="step-btns">
+          <button class="sbtn active" onclick="setStep(1, this)">1</button>
+          <button class="sbtn" onclick="setStep(5, this)">5</button>
+          <button class="sbtn" onclick="setStep(10, this)">10</button>
+          <button class="sbtn" onclick="setStep(100, this)">100</button>
+        </div>
+      </div>
+
+      <div class="counter-stats">
+        <div class="stat-box">
+          <span class="stat-val" id="stat-max">0</span>
+          <span class="stat-key">Max</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-val" id="stat-min">0</span>
+          <span class="stat-key">Min</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-val" id="stat-ops">0</span>
+          <span class="stat-key">Operations</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Preetam Chakraborty &nbsp;|&nbsp; ID: 0222420005101154 &nbsp;|&nbsp; CSE 3210 &mdash; Internet Programming &nbsp;|&nbsp; Premier University, Chittagong</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
